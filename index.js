@@ -11,7 +11,23 @@ const currentOperandTextElement = document.querySelector(".current-operand");
 const simpleCalculator = (previousOperandTextElement, currentOperandTextElement) => {
 
 
-
+  const operationToPerform = (selectedOperation) => {
+    if (currentOperand === '') {
+      return;
+    }
+    if (previousOperand !== '') {
+      compute();
+    }
+    operation = selectedOperation;
+    previousOperand = currentOperand;
+    currentOperand = '';
+  }
+  operationBtns.forEach(button => (
+    button.addEventListener('click', () => {
+      operationToPerform(button.textContent);
+      console.log('check')
+    })
+  ));
 
 
 

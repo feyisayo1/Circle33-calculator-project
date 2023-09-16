@@ -128,7 +128,6 @@ const myh3 =document.querySelector("h3")
 const mymain =document.querySelector("main")
 range.addEventListener('change', function (event) {
     const value = this.value;
-    console.log(this.value)
 
     if (value == this.min) {
         body.style.background="#181F32",

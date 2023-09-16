@@ -91,7 +91,7 @@ equalsBtn.addEventListener("click", () => {
     currentOperand = computation;
     operation = null;
     previousOperand = '';
-
+ }
 
 //this is the Update display code to display the function that has been called
 const updateDisplay = () => {

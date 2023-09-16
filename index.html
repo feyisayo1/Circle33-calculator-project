@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,13 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap" rel="stylesheet">
     <title>Circle-33 Calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" id="stylesheet">  
   </head>
   <body>
-    <section>
-      <div class="input">
-        <h3>Circle-33</h3>
-      </div>
+    <section id="section">
+        <div class="input">
+            <h3>Circle-33</h3>
+            <input type="range" step="1" id="range" min="1" max="2" class="range">    
+        </div>
       <main class="display">
           <div class="previous-operand"></div>
           <div class="current-operand"></div>
@@ -42,3 +44,4 @@
     <script src="index.js"></script>
   </body>
 </html>
+

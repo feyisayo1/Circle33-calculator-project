@@ -58,7 +58,6 @@ main{
   min-height: 70px;
   background-color: #181F32;
   color:var(--main-color);
-  font-size: 30px;
   text-align: right;
   border-style: none;
   border-radius: 10px;
@@ -71,10 +70,14 @@ main{
 .current-operand{
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+  font-size: 22px;
+  
 }
 .previous-operand{
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+  font-size: 15px;
+  
 }
 .buttons{
   display: grid;

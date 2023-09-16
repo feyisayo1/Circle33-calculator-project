@@ -65,16 +65,16 @@ const appendNumber = (number) => {
       computation = prev + current;
       break;
       case '-':
-        computation = prev - current;
-        break;
-        case '*':
-          computation = prev * current;
-          break;
-          case '/':
-            computation = prev / current;
-            break;
-            default: //if none of these signs (+, -, *, /) match our operation, we want to return, to avoid invalid response
-              return;
+      computation = prev - current;
+      break;
+      case '*':
+       computation = prev * current;
+       break;
+      case '/':
+      computation = prev / current;
+      break;
+      default: //if none of these signs (+, -, *, /) match our operation, we want to return, to avoid invalid response
+        return;
     }
     currentOperand = computation;
     operation = null;
@@ -148,3 +148,4 @@ range.addEventListener('change', function (event) {
         
     }
   });
+

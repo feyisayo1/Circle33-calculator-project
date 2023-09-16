@@ -48,7 +48,6 @@ const appendNumber = (number) => {
   operationBtns.forEach(button => (
     button.addEventListener('click', () => {
       operationToPerform(button.textContent);
-      console.log('check')
     })
   ));
 

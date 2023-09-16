@@ -31,7 +31,6 @@ const appendNumber = (number) => {
   numberBtns.forEach(button => (
     button.addEventListener('click', () => {
       appendNumber(button.textContent);
-      console.log('clicked');
       updateDisplay()
     })
   ));

@@ -9,6 +9,9 @@ const currentOperandTextElement = document.querySelector(".current-operand");
 
 
 const simpleCalculator = (previousOperandTextElement, currentOperandTextElement) => {
+let previousOperand = "";
+let currentOperand = "";
+let operation = null;
 
 
   const operationToPerform = (selectedOperation) => {
@@ -25,10 +28,43 @@ const simpleCalculator = (previousOperandTextElement, currentOperandTextElement)
   operationBtns.forEach(button => (
     button.addEventListener('click', () => {
       operationToPerform(button.textContent);
-      console.log('check')
     })
   ));
+    
+const clearScreen = () => {
+  previousOperand = "";
+  currentOperand = "";
+  operation = null;
+};
+clearBtn.addEventListener("click", () => {
+  clearScreen();
+  updateDisplay();
+});
 
+const singleDelete = () => {
+  currentOperand = currentOperand.toString().slice(0, -1);
+};
+deleteBtn.addEventListener("click", () => {
+  singleDelete();
+  updateDisplay();
+});
+
+const appendNumber = (number) => {
+  if (number === "." && currentOperand.includes(".")) {
+    return;
+  }
+  currentOperand = currentOperand.toString() + number.toString();
+};
+numberBtns.forEach((button) =>
+  button.addEventListener("click", () => {
+    appendNumber(button.textContent);
+    updateDisplay();
+  })
+);
+equalsBtn.addEventListener("click", () => {
+  compute();
+  updateDisplay();
+});
  const compute = () => {
     let computation;
     const prev = parseFloat(previousOperand);
